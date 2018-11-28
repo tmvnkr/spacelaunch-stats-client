@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     height: '100%';
     margin: 0;
     padding: 0;
-    font-family: Source Sans Pro, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     background: #171c1f;
     color: white;
   }
