@@ -41,15 +41,15 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1em;
   }
   h2 {
-    font-size: 40;
+    font-size: 1.8em;
   }
   h3 {
-    font-size: 36;
+    font-size: 1.5em;
   }
   h5 {
-    font-size:16;
-    text-transform: 'uppercase';
-    letter-spacing: 4;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 `;
 
