@@ -2,6 +2,7 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import GlobalStyle from './styles';
+import LandingPage from './pages/Landing';
 
 // Set up the apollo-client to point at the server
 const cache = new InMemoryCache();
@@ -20,7 +21,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <GlobalStyle />
-      <h1>Hello space!</h1>
+      <LandingPage />
     </ApolloProvider>
   );
 }

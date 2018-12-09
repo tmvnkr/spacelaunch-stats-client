@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
-    padding: 0;
+    padding: 0 20%;
     font-family: 'Exo 2', sans-serif;
     background: ${colors.background};
     color: ${colors.text};
