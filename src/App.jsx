@@ -1,30 +1,27 @@
-import React from 'react';
-import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
-import GlobalStyle from './styles';
+import React, { Fragment } from 'react';
+import { Router } from '@reach/router';
+import GlobalStyle, { color } from './styles';
+import Sidebar from './components/sidebar/Sidebar';
 import Container from './components/layout/Container';
 import Landing from './pages/Landing.jsx';
-
-// Set up the apollo-client to point at the server
-const cache = new InMemoryCache();
-const client = new ApolloClient({
-  cache,
-  link: new HttpLink({
-    uri: '/graphql',
-    headers: {
-      'client-name': 'Space Explorer [web]',
-      'client-version': '1.0.0'
-    }
-  })
-});
+import Capsules from './pages/Capsules';
+import Launchpads from './pages/Launchpads';
+import { ThemeProvider } from 'styled-components';
 
 export default function App() {
   return (
-    <ApolloProvider client={client}>
-      <GlobalStyle />
-      <Container>
-        <Landing />
-      </Container>
-    </ApolloProvider>
+    <ThemeProvider theme={color.light}>
+      <Fragment>
+        <GlobalStyle />
+        <Sidebar />
+        <Container>
+          <Router>
+            <Landing path="/" />
+            <Capsules path="capsules" />
+            <Launchpads path="launchpads" />
+          </Router>
+        </Container>
+      </Fragment>
+    </ThemeProvider>
   );
 }

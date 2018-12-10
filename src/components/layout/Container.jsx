@@ -7,9 +7,9 @@ export default function Container(props) {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 100vw;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 76vw;
+    padding-right: 2vw;
+    padding-left: 22vw;
     margin-right: auto;
     margin-left: auto;
     @media ${device.mobile} {

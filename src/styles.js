@@ -1,14 +1,26 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const color = {
-  primary: '#171c1f',
-  secondary: '#1e2326',
-  tertiary: '#303538',
-  accent: '#e535ab',
-  background: '#171c1f',
-  grey: '#d8d9e0',
-  text: '#fefefe',
-  textSecondary: '#747790'
+  dark: {
+    primary: '#171c1f',
+    secondary: '#1e2326',
+    tertiary: '#303538',
+    accent: '#e535ab',
+    background: '#171c1f',
+    grey: '#d8d9e0',
+    text: '#fefefe',
+    textSecondary: '#747790'
+  },
+  light: {
+    primary: 'white',
+    secondary: 'fefefe',
+    tertiary: '#303538',
+    accent: '#e535ab',
+    background: 'fefefe',
+    grey: '#d8d9e0',
+    text: 'black',
+    textSecondary: 'darkgrey'
+  }
 };
 
 export const size = {
@@ -27,15 +39,10 @@ export const device = {
 // Styled components - Global style
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
-  /* html, body {
-    height: 200%;
-  } */
   body {
     margin: 0;
     padding: 0;
     font-family: 'Exo 2', sans-serif;
-    background: ${color.background};
-    color: ${color.text};
   }
   #root {
     display: 'flex';

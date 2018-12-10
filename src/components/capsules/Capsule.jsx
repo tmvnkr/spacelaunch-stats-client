@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Launchpad() {
+export default function Capsules() {
   return (
     <div>
-      <h1>Launchpad</h1>
+      <h1>Capsules</h1>
     </div>
   );
 }
