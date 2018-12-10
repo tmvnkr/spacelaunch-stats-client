@@ -32,7 +32,7 @@ const Background = styled.aside`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: ${props => props.theme.primary};
+  background-color: ${props => props.theme.Sidebar};
   overflow-x: hidden;
   padding-top: 20px;
 `;
