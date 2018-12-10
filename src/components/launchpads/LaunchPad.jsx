@@ -1,11 +1,9 @@
 import React from 'react';
 
-function LaunchPad() {
+export default function LaunchPad() {
   return (
     <div>
       <h1>Hello worldS</h1>
     </div>
   );
 }
-
-export default LaunchPad;

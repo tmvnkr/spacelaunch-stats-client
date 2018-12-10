@@ -1,7 +1,7 @@
 import React from 'react';
-import LaunchPad from '../components/LaunchPad';
+import LaunchPad from '../components/launchpads/LaunchPad';
 
-function Landing() {
+export default function Landing() {
   return (
     <div>
       <h1>Landing Page</h1>
@@ -9,5 +9,3 @@ function Landing() {
     </div>
   );
 }
-
-export default Landing;

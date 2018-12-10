@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const colors = {
+export const color = {
   primary: '#171c1f',
   secondary: '#1e2326',
   tertiary: '#303538',
@@ -11,18 +11,31 @@ export const colors = {
   textSecondary: '#747790'
 };
 
+export const size = {
+  huge: '1200px',
+  large: '992px',
+  medium: '768px',
+  small: '576px'
+};
+export const device = {
+  mobile: `(min-width: ${size.small})`,
+  tablet: `(min-width: ${size.medium})`,
+  laptop: `(min-width: ${size.large})`,
+  desktop: `(min-width: ${size.huge})`
+};
+
 // Styled components - Global style
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
-  html, body {
-    height: '100%';
-  }
+  /* html, body {
+    height: 200%;
+  } */
   body {
     margin: 0;
-    padding: 0 20%;
+    padding: 0;
     font-family: 'Exo 2', sans-serif;
-    background: ${colors.background};
-    color: ${colors.text};
+    background: ${color.background};
+    color: ${color.text};
   }
   #root {
     display: 'flex';

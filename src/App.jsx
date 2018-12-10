@@ -2,7 +2,8 @@ import React from 'react';
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import GlobalStyle from './styles';
-import LandingPage from './pages/Landing';
+import Container from './components/layout/Container';
+import Landing from './pages/Landing.jsx';
 
 // Set up the apollo-client to point at the server
 const cache = new InMemoryCache();
@@ -17,13 +18,13 @@ const client = new ApolloClient({
   })
 });
 
-function App() {
+export default function App() {
   return (
     <ApolloProvider client={client}>
       <GlobalStyle />
-      <LandingPage />
+      <Container>
+        <Landing />
+      </Container>
     </ApolloProvider>
   );
 }
-
-export default App;
