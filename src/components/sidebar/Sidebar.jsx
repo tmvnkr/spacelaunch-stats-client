@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
+import ThemeSelect from './ThemeSelect';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   return (
-    <Bar>
+    <Background>
       Sidebar
       <Link to="/">
         <StyledLinks>Home</StyledLinks>
@@ -15,7 +16,8 @@ export default function Sidebar() {
       <Link to="launchpads">
         <h1>Launchpads</h1>
       </Link>
-    </Bar>
+      <ThemeSelect handleThemeChange={props.handleThemeChange} />
+    </Background>
   );
 }
 
@@ -23,14 +25,14 @@ export default function Sidebar() {
  * STYLED COMPONENTS USED IN THIS FILE ARE BELOW HERE
  */
 
-const Bar = styled.aside`
+const Background = styled.aside`
   height: 100%;
   width: 20vw;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: ${props => props.theme.primary};
   overflow-x: hidden;
   padding-top: 20px;
 `;

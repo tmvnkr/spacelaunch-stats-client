@@ -12,7 +12,7 @@ export default function Container(props) {
     padding-left: 22vw;
     margin-right: auto;
     margin-left: auto;
-    @media ${device.mobile} {
+    /* @media ${device.mobile} {
       max-width: 540px;
     }
     @media ${device.tablet} {
@@ -23,12 +23,8 @@ export default function Container(props) {
     }
     @media ${device.desktop} {
       max-width: 1140px;
-    }
+    } */
   `;
 
-  return (
-    <>
-      <Container>{props.children}</Container>
-    </>
-  );
+  return <Container>{props.children}</Container>;
 }

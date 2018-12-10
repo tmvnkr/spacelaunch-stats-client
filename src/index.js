@@ -19,9 +19,19 @@ const client = new ApolloClient({
   })
 });
 
-ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
-  rootEl
-);
+let render = () => {
+  ReactDOM.render(
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>,
+    rootEl
+  );
+};
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    setTimeout(render);
+  });
+}
+
+render();

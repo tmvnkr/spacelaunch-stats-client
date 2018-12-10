@@ -1,26 +1,24 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const color = {
-  dark: {
-    primary: '#171c1f',
-    secondary: '#1e2326',
-    tertiary: '#303538',
-    accent: '#e535ab',
-    background: '#171c1f',
-    grey: '#d8d9e0',
-    text: '#fefefe',
-    textSecondary: '#747790'
-  },
-  light: {
-    primary: 'white',
-    secondary: 'fefefe',
-    tertiary: '#303538',
-    accent: '#e535ab',
-    background: 'fefefe',
-    grey: '#d8d9e0',
-    text: 'black',
-    textSecondary: 'darkgrey'
-  }
+export const darkTheme = {
+  primary: '#171c1f',
+  secondary: '#1e2326',
+  tertiary: '#303538',
+  accent: '#e535ab',
+  background: '#171c1f',
+  grey: '#d8d9e0',
+  text: '#fefefe',
+  textSecondary: '#747790'
+};
+export const lightTheme = {
+  primary: '#fefefe',
+  secondary: '#fefefe',
+  tertiary: '#303538',
+  accent: '#e535ab',
+  background: '#fefefe',
+  grey: '#d8d9e0',
+  text: 'black',
+  textSecondary: 'darkgrey'
 };
 
 export const size = {
