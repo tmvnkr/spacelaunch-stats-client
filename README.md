@@ -1,4 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg"></p>
+
+<h1 align="center">Spacelaunch Stats</h1>
+
+<p align="center">
+<a href="https://github.com/vaneker/spacelaunch-stats-client/releases"><img src="https://img.shields.io/badge/version-0.1.0-brightgreen.svg"></a>
+<a href="https://developer.mozilla.org/bm/docs/Web/JavaScript"><img src="https://img.shields.io/badge/language-JavaScript-yellow.svg"></a>
+<a href="https://reactjs.org/"><img src="https://img.shields.io/badge/framework-React-blue.svg"></a>
+
+</p>
+
+<h3 align="center">Web application covering every SpaceX launch in-depth</h3>
+
+## Data Sources
+
+A majority of the data is currently sourced from [r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API). On the server side I use [spacelaunch-stats-server](https://github.com/vaneker/spacelaunch-stats-server) that utilized the Apollo GraphQL server middleware to increase performance by on the front-end by preventing unused API calls.
 
 ## Available Scripts
 
@@ -26,19 +41,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
