@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import { defaults, resolvers } from './state';
 
 const rootEl = document.getElementById('root');
 
@@ -11,12 +12,16 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: '/graphql',
+    uri: 'http://localhost:5000/graphql',
     headers: {
       'client-name': 'Space Explorer [web]',
       'client-version': '1.0.0'
     }
-  })
+  }),
+  clientState: {
+    defaults,
+    resolvers
+  }
 });
 
 let render = () => {
