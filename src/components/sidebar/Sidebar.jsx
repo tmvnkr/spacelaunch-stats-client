@@ -4,6 +4,7 @@ import { Link } from '@reach/router';
 import ThemeSelect from './ThemeSelect';
 
 export default function Sidebar(props) {
+  const { handleThemeChange } = props;
   return (
     <Background>
       Sidebar
@@ -16,7 +17,7 @@ export default function Sidebar(props) {
       <Link to="launchpads">
         <h1>Launchpads</h1>
       </Link>
-      <ThemeSelect handleThemeChange={props.handleThemeChange} />
+      <ThemeSelect handleThemeChange={handleThemeChange} />
     </Background>
   );
 }
