@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Capsules() {
+export default function Capsule() {
   return (
     <div>
-      <h1>Capsules</h1>
+      <h1>Capsule</h1>
     </div>
   );
 }

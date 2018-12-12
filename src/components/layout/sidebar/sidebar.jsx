@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
-import ThemeSelect from './ThemeSelect';
+import ThemeSelect from './theme-select';
 
 export default function Sidebar(props) {
   const { handleThemeChange } = props;

@@ -1,11 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { Router } from '@reach/router';
 import GlobalStyle, { darkTheme, lightTheme } from './styles';
-import Sidebar from './components/sidebar/Sidebar';
-import Container from './components/layout/Container';
-import Landing from './pages/Landing.jsx';
-import Capsules from './pages/Capsules';
-import Launchpads from './pages/Launchpads';
+import { Sidebar, Container } from './components';
+import { Landing, Capsules, Launchpads } from './pages';
 import { ThemeProvider } from 'styled-components';
 
 export default function App() {

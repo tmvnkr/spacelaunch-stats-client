@@ -1,5 +1,5 @@
 import React from 'react';
-import Capsule from '../components/capsules/Capsule';
+import { Capsule } from '../components';
 
 export default function Capsules() {
   return (

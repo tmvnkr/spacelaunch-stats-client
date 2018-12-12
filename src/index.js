@@ -29,6 +29,7 @@ let render = () => {
   );
 };
 
+// hot reloading for production [REMOVE] when dist
 if (module.hot) {
   module.hot.accept('./App', () => {
     setTimeout(render);
