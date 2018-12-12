@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
+import Main from './main';
+import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { defaults, resolvers } from './state';
 
 const rootEl = document.getElementById('root');
 
 // Set up the apollo-client to point at the server
-const cache = new InMemoryCache();
 const client = new ApolloClient({
-  cache,
-  link: new HttpLink({
-    uri: 'http://localhost:5000/graphql'
-  }),
+  uri: 'http://localhost:5000/graphql',
   clientState: {
     defaults,
     resolvers
@@ -23,7 +19,7 @@ const client = new ApolloClient({
 let render = () => {
   ReactDOM.render(
     <ApolloProvider client={client}>
-      <App />
+      <Main />
     </ApolloProvider>,
     rootEl
   );
@@ -31,7 +27,7 @@ let render = () => {
 
 // hot reloading for production [REMOVE] when dist
 if (module.hot) {
-  module.hot.accept('./App', () => {
+  module.hot.accept('./main', () => {
     setTimeout(render);
   });
 }
