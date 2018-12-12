@@ -1,6 +1,9 @@
 {
-  "name": "client",
+  "name": "spacelaunch-stats-client",
   "version": "0.1.0",
+  "description": "Frontend for the Spacelaunch stats app",
+  "author": "Tim Vaneker",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
