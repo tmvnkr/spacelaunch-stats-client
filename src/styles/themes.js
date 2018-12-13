@@ -1,20 +1,20 @@
 export const darkTheme = {
-  primary: 'blue',
-  secondary: 'green',
-  tertiary: 'purple',
-  sidebar: 'red',
-  background: 'yellow',
-  grey: 'grey',
-  text: 'white',
-  textSecondary: 'lightgrey'
+  primary: '#181c1f',
+  secondary: '#ababac',
+  tertiary: '#09090b',
+  sidebar: '#0e1112',
+  background: '#21272b',
+  grey: '#8b939a',
+  text: '#ffffff',
+  textSecondary: '#e0e0e2'
 };
 export const lightTheme = {
-  primary: 'lightcoral',
-  secondary: 'lightblue',
-  tertiary: 'lightpink',
-  sidebar: 'yellow',
-  background: 'red',
-  grey: 'grey',
-  text: 'black',
-  textSecondary: 'darkgrey'
+  primary: '#30373c',
+  secondary: '#646f77',
+  tertiary: '#98a3ab',
+  sidebar: '#a9a9a9',
+  background: '#efefef',
+  grey: '#8b939a',
+  text: '#040404',
+  textSecondary: '#1f1f1f'
 };

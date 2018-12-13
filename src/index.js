@@ -24,7 +24,6 @@ let render = () => {
     <ApolloProvider client={client}>
       <Query query={GET_THEME}>
         {({ data }) => {
-          console.log(data.theme);
           return (
             <ThemeProvider theme={themeHandler(data.theme)}>
               <Main />

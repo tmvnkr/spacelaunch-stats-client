@@ -1,20 +1,4 @@
-import { themeHandler, themeKey } from '../styles';
+import { default as resolvers } from './resolvers';
+import { default as defaults } from './defaults';
 
-export const defaults = {
-  theme: localStorage.getItem(themeKey)
-};
-
-export const resolvers = {
-  Mutation: {
-    toggleTheme: (_parent, _args, { cache }) => {
-      if (localStorage.getItem(themeKey) === 'false') {
-        themeHandler('true');
-        cache.writeData({ data: { theme: 'true' } });
-      } else {
-        themeHandler('false');
-        cache.writeData({ data: { theme: 'false' } });
-      }
-      return null;
-    }
-  }
-};
+export { resolvers, defaults };
