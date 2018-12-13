@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './main';
 import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider, Query } from 'react-apollo';
 import { defaults, resolvers } from './state';
+import { themeHandler } from './styles';
+import { ThemeProvider } from 'styled-components';
+import { GET_THEME } from './queries';
 
 const rootEl = document.getElementById('root');
 
@@ -19,7 +22,16 @@ const client = new ApolloClient({
 let render = () => {
   ReactDOM.render(
     <ApolloProvider client={client}>
-      <Main />
+      <Query query={GET_THEME}>
+        {({ data }) => {
+          console.log(data.theme);
+          return (
+            <ThemeProvider theme={themeHandler(data.theme)}>
+              <Main />
+            </ThemeProvider>
+          );
+        }}
+      </Query>
     </ApolloProvider>,
     rootEl
   );

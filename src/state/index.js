@@ -1,24 +1,19 @@
-import { GET_THEME } from '../queries';
-
-const getTheme = () => {
-  localStorage.getItem('themeApollo') !== null
-    ? localStorage.getItem('themeApollo')
-    : localStorage.setItem('themeApollo', +false);
-  const theme = localStorage.getItem('themeApollo');
-  return theme;
-};
+import { themeHandler, themeKey } from '../styles';
 
 export const defaults = {
-  theme: getTheme()
+  theme: localStorage.getItem(themeKey)
 };
 
 export const resolvers = {
   Mutation: {
     toggleTheme: (_parent, _args, { cache }) => {
-      const previous = cache.readQuery({ query: GET_THEME });
-      const data = { theme: !previous.theme };
-      cache.writeData({ data });
-      localStorage.setItem('themeApollo', +!previous.theme);
+      if (localStorage.getItem(themeKey) === 'false') {
+        themeHandler('true');
+        cache.writeData({ data: { theme: 'true' } });
+      } else {
+        themeHandler('false');
+        cache.writeData({ data: { theme: 'false' } });
+      }
       return null;
     }
   }
