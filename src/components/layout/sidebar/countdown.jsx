@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function Countdown(props) {
   const { launchDateUnix } = props;
   const [time, setTime] = useState({});
-  const [seconds, setSeconds] = useState(launchDateUnix);
+  const [secondsToLaunch, setSeconds] = useState(launchDateUnix);
 
   let timer = 0;
 
@@ -17,19 +17,19 @@ export default function Countdown(props) {
     let minutes = Math.floor(divisor_for_minutes / 60);
 
     let divisor_for_seconds = divisor_for_minutes % 60;
-    let secondss = Math.ceil(divisor_for_seconds);
+    let seconds = Math.ceil(divisor_for_seconds);
 
     let timeUnits = {
-      days,
-      hours,
-      minutes,
-      secondss
+      d: days,
+      h: hours,
+      m: minutes,
+      s: seconds
     };
     return timeUnits;
   };
 
   const startTimer = () => {
-    if (timer === 0 && seconds > 0) {
+    if (timer === 0 && secondsToLaunch > 0) {
       timer = setInterval(countDown, 1000);
     }
   };
@@ -49,13 +49,47 @@ export default function Countdown(props) {
     }
   };
 
+  const countdownFormat = () => {
+    let days, hours, minutes, seconds, formattedTime;
+    if (time.d === 0) {
+      days = '';
+    } else if (time.d === 1) {
+      days = `${time.d} day `;
+    } else {
+      days = `${time.d} days `;
+    }
+
+    if (time.h === 0) {
+      hours = '00:';
+    } else if (time.h <= 9) {
+      hours = `0${time.h}:`;
+    } else {
+      hours = `${time.h}:`;
+    }
+
+    if (time.m === 0) {
+      minutes = '00:';
+    } else if (time.m <= 9) {
+      minutes = `0${time.m}:`;
+    } else {
+      minutes = `${time.m}:`;
+    }
+
+    if (time.s === 0) {
+      seconds = '00';
+    } else if (time.s <= 9) {
+      seconds = `0${time.s}`;
+    } else {
+      seconds = time.s;
+    }
+
+    formattedTime = `${days}${hours}${minutes}${seconds}`;
+    return formattedTime;
+  };
+
   return (
-    <div>
-      <div>
-        <h1>
-          {time.days} days {time.hours}:{time.minutes}:{time.secondss}
-        </h1>
-      </div>
-    </div>
+    <>
+      <h1>{countdownFormat()}</h1>
+    </>
   );
 }

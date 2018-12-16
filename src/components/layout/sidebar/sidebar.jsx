@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import StyledLink from './styled-link';
 import { Mutation } from 'react-apollo';
 import { TOGGLE_THEME } from '../../../queries';
-import Countdown from './countdown';
+import Countdown from '../../countdown/countdown';
 
 export default function Sidebar() {
   return (
@@ -14,7 +14,7 @@ export default function Sidebar() {
       <Mutation mutation={TOGGLE_THEME}>
         {toggleTheme => <button onClick={toggleTheme}>dd</button>}
       </Mutation>
-      <Countdown launchDateUnix={1545142200} />
+      <Countdown launchDateUnix={1544992200} />
     </Background>
   );
 }
