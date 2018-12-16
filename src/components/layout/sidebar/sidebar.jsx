@@ -6,12 +6,6 @@ import { TOGGLE_THEME } from '../../../queries';
 import Countdown from './countdown';
 
 export default function Sidebar() {
-  new Date().getTime();
-  const time = Math.floor(Date.now() / 1000);
-  const countdown = 1545142200 - time;
-  const dayss = Math.floor(countdown / 86400);
-  // const days = countdown % 86400;
-
   return (
     <Background>
       <StyledLink to="/">Home</StyledLink>
@@ -20,8 +14,7 @@ export default function Sidebar() {
       <Mutation mutation={TOGGLE_THEME}>
         {toggleTheme => <button onClick={toggleTheme}>dd</button>}
       </Mutation>
-      <h1>{dayss}</h1>
-      <Countdown time={1545142200} />
+      <Countdown launchDateUnix={1545142200} />
     </Background>
   );
 }

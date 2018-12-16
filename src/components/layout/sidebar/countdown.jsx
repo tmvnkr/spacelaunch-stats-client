@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-
-// MAKE THIS SCRIPT RUN ONCE ON BEING CALLED
+import React, { useState, useEffect } from 'react';
 
 export default function Countdown(props) {
+  const { launchDateUnix } = props;
   const [time, setTime] = useState({});
-  const [seconds, setSeconds] = useState(4543534);
+  const [seconds, setSeconds] = useState(launchDateUnix);
 
   let timer = 0;
 
@@ -35,11 +34,16 @@ export default function Countdown(props) {
     }
   };
 
+  useEffect(() => {
+    startTimer();
+  }, []);
+
+  useEffect(() => {});
+
   const countDown = () => {
-    const countdown = 1545142200 - Math.floor(Date.now() / 1000);
+    const countdown = launchDateUnix - Math.floor(Date.now() / 1000);
     setTime(secondsToTime(countdown));
     setSeconds(countdown);
-    console.log(countdown);
     if (countdown === 0) {
       clearInterval(timer);
     }
@@ -48,7 +52,9 @@ export default function Countdown(props) {
   return (
     <div>
       <div>
-        {time.days} days {time.hours}:{time.minutes}:{time.secondss}
+        <h1>
+          {time.days} days {time.hours}:{time.minutes}:{time.secondss}
+        </h1>
       </div>
     </div>
   );
