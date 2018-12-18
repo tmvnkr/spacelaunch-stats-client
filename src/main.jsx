@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Router } from '@reach/router';
-import { GlobalStyle } from './styles';
+import { GlobalStyle } from './theme';
 import { Sidebar, Container } from './components';
 import { Landing, Capsules, Launchpads } from './pages';
 

@@ -1,4 +1,4 @@
-import { themeHandler, themeKey } from '../styles';
+import { themeHandler, themeKey } from '../theme';
 
 export const themeDefaults = {
   theme: localStorage.getItem(themeKey)

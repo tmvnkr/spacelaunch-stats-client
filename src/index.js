@@ -4,7 +4,7 @@ import Main from './main';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider, Query } from 'react-apollo';
 import { defaults, resolvers } from './state';
-import { themeHandler } from './styles';
+import { themeHandler } from './theme';
 import { ThemeProvider } from 'styled-components';
 import { GET_THEME } from './queries';
 
