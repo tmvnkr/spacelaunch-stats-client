@@ -4,8 +4,6 @@
 
 <p align="center">
 <a href="https://github.com/vaneker/spacelaunch-stats-client/releases"><img src="https://img.shields.io/badge/version-0.1.0-brightgreen.svg"></a>
-<a href="https://developer.mozilla.org/bm/docs/Web/JavaScript"><img src="https://img.shields.io/badge/language-JavaScript-yellow.svg"></a>
-<a href="https://reactjs.org/"><img src="https://img.shields.io/badge/framework-React-blue.svg"></a>
 <a href="https://github.com/vaneker/spacelaunch-stats-client/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-red.svg"></a>
 
 </p>
